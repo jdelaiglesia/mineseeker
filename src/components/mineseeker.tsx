@@ -147,7 +147,9 @@ export function MineseekerComponent() {
     newGrid[row][col].state =
       newGrid[row][col].state === "flagged" ? "hidden" : "flagged";
     setGrid(newGrid);
-    setFlags(flags + 1);
+    newGrid[row][col].state === "flagged"
+      ? setFlags(flags + 1)
+      : setFlags(flags - 1);
   };
 
   const checkWinCondition = () => {
