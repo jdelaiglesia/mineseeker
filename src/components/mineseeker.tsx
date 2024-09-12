@@ -23,7 +23,7 @@ export function MineseekerComponent() {
 
   useEffect(() => {
     initializeGrid();
-  }, []);
+  });
 
   const initializeGrid = (safeRow: number = -1, safeCol: number = -1) => {
     let newGrid: Cell[][];
