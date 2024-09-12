@@ -23,7 +23,8 @@ export function MineseekerComponent() {
 
   useEffect(() => {
     initializeGrid();
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const initializeGrid = (safeRow: number = -1, safeCol: number = -1) => {
     let newGrid: Cell[][];
